@@ -1,0 +1,126 @@
+.AboutCompany{
+    margin-top: 50px !important;
+    width: 100%;
+    height: 70vh;
+    .AboutCompanyImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            object-fit: contain;
+            width: 350px;
+        }
+    }
+    .AboutCompanyText{
+        display: flex;
+        align-items: center;
+        text-align: left;
+       h2{
+        margin: 5px 0 50px 0;
+        font-weight: 800;
+       }
+       button{
+        margin-top: 20px;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        width: 150px;
+        height: 45px;
+        font-size: 22px;
+        background-color: #28C79E;
+       }
+    }
+}
+.AboutInfo{
+    background-color: white;
+    overflow: hidden;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .AboutInfoRow{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .aboutInfo_Icon{
+            font-weight: 700;
+            font-size: 26px;
+            i{
+                color: #28C79E;
+                font-size: 37px;
+            }
+        }
+        .aboutInfo_Text{
+            color: grey;
+            text-align: center;
+        }
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    .AboutCompany{
+        margin-top: 0px !important;
+        width: 100%;
+        height: 70vh;
+        .AboutCompanyImg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                object-fit: contain;
+                width: 300px;
+            }
+        }
+        .AboutCompanyText{
+            margin-top: 55px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+           h2{
+            margin: 5px 0 20px 0;
+            font-weight: 800;
+            font-size: 20px;
+           }
+           button{
+            margin-top: 10px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            width: 120px;
+            height: 40px;
+            font-size: 18px;
+            background-color: #28C79E;
+           }
+        }
+    }
+    .AboutInfo{
+        margin-top: 375px;
+        overflow: hidden;
+        height: 500px;
+        display: block !important;
+        margin-left: -25px;
+        .AboutInfoRow{
+            margin-top: 50px;
+            width: 100%;
+            display: block;
+            text-align: left;
+            .aboutInfo_Icon{
+                margin-top: 30px;
+                font-weight: 600;
+                font-size: 22px;
+                i{
+                    color: #28C79E;
+                    font-size: 37px;
+                }
+            }
+            .aboutInfo_Text{
+                color: grey;
+                text-align: center;
+            }
+        }
+    }
+    
+}

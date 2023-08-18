@@ -1,0 +1,95 @@
+.backdrop{
+    height: 500px;
+    position: relative;
+    background: none ;
+    overflow: hidden;
+
+    section{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(https://i.ibb.co/cyDsQq9/logo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-attachment: fixed;
+        filter: brightness(50%);
+    }
+    .backdropText{
+        position: absolute;
+        bottom: 100px;
+        left: 100px;
+        .backdropLogo{
+            margin-bottom: 70px;
+            display: flex;
+            color: white;
+            align-items: end;
+            h4{
+                font-size: 35px;
+            }
+            img{
+                object-fit: contain;
+                height: 50px;
+                float: left;
+            }
+        }
+        h2{
+            text-align: left;
+            font-weight: 700;
+            color: white;
+            filter: brightness(100%);
+        }
+       
+    }
+}
+
+
+@media (max-width: 425px) {
+    .backdrop{
+        height: 300px;
+        position: relative;
+        background: none ;
+        overflow: hidden;
+       }
+        section{
+            position: absolute;
+            left: 0px;
+            width: 100vw !important;
+            height: 100vh;
+            background-image: url(https://kartinkin.net/uploads/posts/2022-12/1670540158_2-kartinkin-net-p-kartinki-kollektiva-krasivo-2.jpg) !important;
+            background-size:  cover !important;
+            background-repeat: no-repeat;
+            background-position-y: bottom;
+            background-attachment: fixed;
+            background-position: center;
+            filter: brightness(50%);
+        }
+        .backdropText{
+            position: absolute;
+            bottom: 0px !important;
+            left: 10px !important;
+            .backdropLogo{
+                margin-bottom: 20px !important;
+                display: flex;
+                color: white;
+                align-items: end;
+                h4{
+                    font-size: 25px !important;
+                }
+                img{
+                    object-fit: contain;
+                    height: 40px !important;
+                    float: left;
+                }
+            }
+            h2{
+                margin-bottom: 55px !important;
+                font-size: 20px;
+                text-align: left;
+                font-weight: 700;
+                color: white;
+                filter: brightness(100%);
+            }
+           
+        }
+    }
+    

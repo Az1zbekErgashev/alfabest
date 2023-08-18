@@ -1,0 +1,128 @@
+.link{
+    color: white;
+    text-decoration: none;
+
+}
+.footer{
+    display: flex;
+    align-items: center;
+    background-color:  #1B2330;
+    ;
+    height: 300px;
+}
+.footer_row{
+    display: flex;
+    align-items: center;justify-content: space-evenly;
+    .FooterLogo{
+        display: flex;
+        align-items: center;
+        img{
+            object-fit: contain;
+            height: 60px;
+        }
+        h2{
+            color: white;
+            font-weight: 700;
+        }
+    }
+    ul{
+        list-style: none;
+        li{
+            margin: 15px 0;
+            text-align: left;
+        }
+    }
+}
+
+
+@media (max-width: 425px) {
+    .footer{
+        display: flex;
+        align-items: center;
+        background-color:  #1B2330;
+        ;
+        height: auto;
+        overflow: hidden !important;
+    }
+    .footer_row{
+        display: block;
+        align-items: center;
+        position: relative;
+        .FooterLogo{
+            margin-top: 50px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-25%);
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            img{
+                object-fit: contain;
+                height: 60px;
+                margin: 0 10px;
+            }
+            h2{
+                color: white;
+                font-weight: 700;
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                margin: 15px 0;
+                text-align: left;
+            }
+        }
+    }
+    .dropdown_iteam_active_footer{
+        width: 300px !important;
+
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            float: right;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            height: 30px;
+            background-color: #33425b;
+        }
+    }.dropdown_iteam_footer{
+        width: 300px;
+    }
+    .offcanvasFooter_icon{
+        position: relative;
+        margin-top: 100PX;
+        P{
+            color: whitesmoke !important; 
+        }
+        a{
+            float: left;
+            margin: 0 15px;
+            color: whitesmoke !important;
+        }
+
+    }
+    .footer_end{
+        border-top: 1px solid white;
+        padding: 30px 0;
+        margin-top: 60px;   
+        .footer_end_dlex{
+            p{
+                color: white;
+                font-weight: 700;
+            }
+        }
+        div{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    
+}
+
+// https://i.ibb.co/s3LQhgb/Vector-1.png
