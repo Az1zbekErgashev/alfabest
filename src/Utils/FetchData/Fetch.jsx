@@ -6,6 +6,8 @@ export const About_Company_Uz = '/api/about_company'
 export const Aim_Uz = '/api/aim'
 export const AimCategoriy_Uz = '/api/aim_category'
 export const History_Uz = '/api/history'
+export const AimAbout = '/api/mission'
+export const PhotoGalerey = '/api/photo_gallery'
 const fetch = axios.create({
 
 })

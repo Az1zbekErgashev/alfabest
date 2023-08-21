@@ -1,11 +1,11 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Data from '../../../Utils/Data'
 import './Aim.scss'
 import Logo from './img/LogoDark.svg'
 import { BaseUrl_Uz } from '../../../Utils/FetchData/Fetch'
 import AOS from 'aos';
-
+import LanguageContext from '../../useContext/LanguageContext'
 
 
 
@@ -13,7 +13,7 @@ import AOS from 'aos';
 export default function Aim() {
     const [aim, setAim] = useState([])
     const [aimCategoriym, setAimCategoriy] = useState([])
-
+    const { language, changeLanguage } = useContext(LanguageContext);
 
 
     function run(){
@@ -22,7 +22,6 @@ export default function Aim() {
             setAim(res)
         })
     }
-
 
     function aim_category(){
         Data.getAimCategoriy_Uz()
@@ -47,25 +46,28 @@ export default function Aim() {
         <div className='row'>
         <div className="col-sm-5 col-12 aimAbout">
             {
-                aim?.length >0 && aim.map((iteam, index)=>{
+                aim && aim?.map((iteam, index)=>{
                     return(
-                        <div  data-aos="fade-right"  data-aos-duration="2000">
+                        <div key={index}  data-aos="fade-right"  data-aos-duration="2000">
                             <img src={Logo} alt="logo" />
-                            <h2>{iteam.title_uz}</h2>
-                            <p>{iteam.text_uz}</p>
+                            {language === 'uz' && <h2>{iteam.title_uz}</h2>}
+                            {language === 'ru' && <h2>{iteam.title_ru}</h2>}
+                            {language === 'uz' && <p>{iteam.text_uz}</p>}
+                            {language === 'ru' && <p>{iteam.text_ru}</p>}
                         </div>
                     )   
                 }) 
-            }
+         }
         </div>
             <div className="col-sm-7 aimCategoriym">
           <ul>
           {
-                aimCategoriym?.length > 0 && aimCategoriym.map((iteam, index)=>{
+                aimCategoriym && aimCategoriym?.map((iteam, index)=>{
                     return(
-                        <li data-aos="fade-left"  data-aos-duration="2000">
+                        <li key={index} data-aos="fade-left"  data-aos-duration="2000">
                             <h1>0{iteam.id}</h1>
-                            <p>{iteam.text_uz}</p>
+                            {language === 'uz' && <p>{iteam.text_uz}</p>}
+                            {language === 'ru' && <p>{iteam.text_ru}</p>}
                             <img src={`${BaseUrl_Uz}/storage/${iteam.image}`} alt="" />
                         </li>
                     )

@@ -10,6 +10,7 @@
         filter: brightness(50%);
     }
     .Button_group {
+       
         position: absolute;
         z-index: 9;
         bottom: 70px;
@@ -30,7 +31,7 @@
             border-radius: 10px;
             width: 150px;
             height: 45px;
-            font-size: 22px;
+            font-size: 19px;
             background-color: #28c79e;
         }
     }
@@ -57,7 +58,7 @@
             button {
                 width: 120px;
                 height: 38px;
-                font-size: 18px;
+                font-size: 14px;
             }
         }
     }

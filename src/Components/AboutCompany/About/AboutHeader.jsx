@@ -1,10 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState , useContext} from 'react'
 import Data from '../../../Utils/Data'
 import { BaseUrl_Uz } from '../../../Utils/FetchData/Fetch'
-export default function AboutHeader() {
-  const [about, setAbout] = useState([])
+import './AboutHeader.scss'
+import LanguageContext from '../../useContext/LanguageContext'
+import LogoDark from './img/LogoDark.svg'
+export default function AboutHeader(props) {
 
+
+  const [about, setAbout] = useState([])
+  const { language, changeLanguage } = useContext(LanguageContext);
   function run(){
     Data.getCompany_Uz()
     .then(res =>{
@@ -14,20 +19,24 @@ export default function AboutHeader() {
   useEffect(()=>{
     run()
   },[])
-
+   console.log(props);
   const About = (
-    <div>
-      <div className="row">
-        <div className="col-12">
+    <div className='container'>
+      <div className="row ">
+        <div className="col-12 AboutPage">
           {
             about && about.map((iteam, index)=>{
               return(
                 <div key={index}>
-                    <div>
-                      <img src={`${BaseUrl_Uz}/storage/${iteam.home_image}`} alt="foto" />
+                    <div style={{position: 'relative'}}>
+                      <img src={`${BaseUrl_Uz}/storage/${iteam.image}`} alt="foto" />
+                      <div className='aboutPageLogo'>
+                        <img src={LogoDark} alt="logo" />
+                        <p>{language === 'uz' ? <>Kompaniya Profili</> : <>Профиль компании</>}</p>
+                      </div>
                     </div>
-                    <div>
-                    <p  dangerouslySetInnerHTML={{__html: iteam.home_text_uz}}></p>
+                    <div className='AboutPageText'>
+                    {language === 'uz' ? <p  dangerouslySetInnerHTML={{__html: iteam.text_uz}} ></p> : <p dangerouslySetInnerHTML={{__html: iteam.text_ru}}></p> }
                     </div>
                 </div>
               )
@@ -38,8 +47,8 @@ export default function AboutHeader() {
     </div>
   )
   return (
-    <div>
-        
+    <div className='container-fluid'>
+        {About}
     </div>
   )
 }

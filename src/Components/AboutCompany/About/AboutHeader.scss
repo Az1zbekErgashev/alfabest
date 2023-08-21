@@ -1,0 +1,62 @@
+.AboutPage{
+    margin-top: 130px;
+    img{
+        border-radius: 25px;
+        filter: brightness(40%);
+    }
+    .aboutPageLogo{
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        color: white;
+        font-size: 28px;
+        font-weight: 700;
+       
+        img{
+            object-fit: contain;
+            width: 60px;
+            filter: brightness(100%);
+        }
+    }
+    .AboutPageText{
+        text-align: left;
+        margin-top: 25px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:425px) {
+    .AboutPage{
+        overflow: hidden;
+        margin-top: 100px;
+        img{
+            border-radius: 15px;
+            filter: brightness(40%);
+            object-fit: contain;
+           width: 330px;
+        }
+        .aboutPageLogo{
+            position: absolute;
+            bottom: 0px;
+            left: 40px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+           
+            img{
+                object-fit: contain;
+                width: 30px;
+                filter: brightness(100%);
+            }
+        }
+        .AboutPageText{
+            text-align: left;
+            margin-top: 35px;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 37px;
+        }
+    }
+    
+}

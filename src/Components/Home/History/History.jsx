@@ -3,12 +3,17 @@ import './History.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import {Autoplay} from 'swiper/modules';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Data from '../../../Utils/Data';
 import { BaseUrl_Uz } from '../../../Utils/FetchData/Fetch';
-import AOS from 'aos';
+import LanguageContext from '../../useContext/LanguageContext';
+import AOS from 'aos'; 
+
+
+
 export default function History() {
     const [histry, setHistory] = useState([])
+    const { language, changeLanguage } = useContext(LanguageContext);
 
 
     function run(){
@@ -40,14 +45,15 @@ export default function History() {
                 data-aos="fade-up"
      data-aos-anchor-placement="center-bottom"
             >
-                {histry
-                    ? histry.map((slide, index) => {
+                {histry 
+                    ? histry?.map((slide, index) => {
                         return (
                             <SwiperSlide>
                                 <div  className='slide_img_history'>
                                <div> <img src={ `${BaseUrl_Uz}/storage/${slide.image}`} alt="logo" /></div>
                                <div className='historyText'>
-                               <p dangerouslySetInnerHTML={{__html: slide.text_uz}}></p>
+                               {language === 'uz' && <p dangerouslySetInnerHTML={{__html: slide.text_uz}}></p>}
+                               {language === 'ru' && <p dangerouslySetInnerHTML={{__html: slide.text_ru}}></p>}
                                </div>
                                 </div>
                             </SwiperSlide>

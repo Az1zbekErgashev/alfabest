@@ -1,0 +1,26 @@
+.imgLine{
+    margin: 20px auto;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        img{
+            object-fit: contain;
+            width: 150px;
+        }
+    }
+}
+@media (max-width:425px) {
+    .imgLine{
+        margin: 20px auto;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            img{
+                object-fit: contain;
+                width: 50px;
+            }
+        }
+    }
+}

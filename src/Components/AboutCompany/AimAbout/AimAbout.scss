@@ -1,0 +1,133 @@
+.AimAbout {
+    margin: 0 auto;
+    margin: 40px auto;
+    display: flex;
+    overflow: hidden;
+
+    .AimAbout_row1 {
+        display: block;
+        .AboutAim_header {
+            text-align: left;
+            h2 {
+                font-weight: 700;
+            }
+        }
+        .AboutAim_body {
+            margin-top: 50px;
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+        }
+    }
+    .AimAbout_row2 {
+        position: relative;
+        padding: 0 30px;
+        h1 {
+            margin-top: 130px;
+            width: 400px;
+            text-align: left;
+            float: left;
+        }
+        img {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+.AboutAimCategoriy {
+    padding: 0 0px;
+    margin: 40px auto;
+    .AboutAimCategoriy__Card {
+        padding: 20px;
+        position: relative;
+        height: 300px;
+        h2 {
+            font-size: 22px;
+            text-align: left;
+            font-weight: 900;
+            width: 400px;
+        }
+        .link {
+            color: black;
+            position: absolute;
+            bottom: 50px;
+            left: 100px;
+            font-weight: 700;
+            i {
+                margin-left: 50px;
+            }
+        }
+        img {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .AimAbout {
+        margin: 0 auto;
+        margin: 30px auto;
+        display: flex;
+        overflow: hidden;
+
+        .AimAbout_row1 {
+            display: block;
+            .AboutAim_header {
+                text-align: left;
+                h2 {
+                    margin-top: 10px;
+                }
+            }
+            .AboutAim_body {
+                margin-top: 30px;
+                font-size: 17px;
+            }
+        }
+        .AimAbout_row2 {
+            h1 {
+                margin: 50px 0 70px -20px;
+            }
+            img {
+                top: 30%;
+            }
+        }
+    }
+    .AboutAimCategoriy {
+        padding: 0 0px;
+        margin: 20px auto;
+        .AboutAimCategoriy__Card {
+            padding: 20px;
+            position: relative;
+            height: 300px;
+            h2 {
+                font-size: 20px;
+                text-align: left;
+                font-weight: 800;
+                width: 300px;
+            }
+            .link {
+                color: black;
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                font-weight: 700;
+                i {
+                    margin-left: 20px;
+                }
+            }
+            img {
+                object-fit: contain;
+                width: 200px;
+                position: absolute;
+                right: 0px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

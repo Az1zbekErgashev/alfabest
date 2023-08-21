@@ -106,6 +106,12 @@
         }
         @include d_flex_center();
     }
+    .active{
+        font-weight: 700;
+    }
+    .activeNo{
+        color: grey !important;
+    }
 }
 
 

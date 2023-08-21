@@ -23,5 +23,13 @@
         margin-bottom: 100px;
         font-style: italic;
         border-bottom: 1px solid grey;
+        button{
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+            height: 40px;
+            background-color: #28C79E ;
+            color: white;
+        }
     }
 }
