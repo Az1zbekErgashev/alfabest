@@ -67,7 +67,7 @@ export default function NavbarMobile() {
             <li className=' text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Hamkorlik</> : <>Сотрудничество</>}</li>
             <Link className='link' to='/about'><li className=' text-dark text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kompaniya haqida</> : <> О компании</>}</li></Link>
             <li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Xarid qilish</> : <>Закупки</>}</li>
-            <li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Karyera</> : <>Карьера</>}</li>
+            <Link to='/carrier' className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Karyera</> : <>Карьера</>}</li></Link>
           </ul>
         </div>
       </div>

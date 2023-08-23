@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey } from "./FetchData/Fetch";
+import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey, Career_uz, Purchase, Team, Cooperation, Servis } from "./FetchData/Fetch";
 
 
 
@@ -104,6 +104,74 @@ class data {
             }
         })
             .then(res => {
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async getCareer_UZ() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Career_uz}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async getPurchse_UZ() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Purchase}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async getTeam_uz() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Team}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
+                // console.log(res.data.datas);
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async getCooperation_uz() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Cooperation}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
+                // console.log(res.data.datas);
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async postServis() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Servis}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
+                // console.log(res.data.datas);
                 return res.data.datas
             })
             .catch(e => {

@@ -5,18 +5,14 @@ import Backdrop from './AboutBackdrop/AboutBackdrop'
 import PhotoWork from './PhotoWork/PhotoWork'
 import Photo from './PhotoGalrey/PhotoIteam'
 import History from '../Home/History/History'
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import PhotoTeam from './PhotoTeam'
 export default function About() {
-  const history = useLocation()
-  useEffect(()=>{
-    localStorage.setItem('savedPage' , (history.pathname))
-  },[])
   return (
     <div className='overflow-hidden'>
         <AboutHeader/>
         <AimAbout/>
         <Backdrop/>
+        <PhotoTeam/>
         <PhotoWork/>
         <Photo/>
         <History/>

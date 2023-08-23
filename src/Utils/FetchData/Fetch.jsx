@@ -8,6 +8,11 @@ export const AimCategoriy_Uz = '/api/aim_category'
 export const History_Uz = '/api/history'
 export const AimAbout = '/api/mission'
 export const PhotoGalerey = '/api/photo_gallery'
+export const Career_uz = '/api/carrier'
+export const Purchase = '/api/purchase'
+export const Team = '/api/team'
+export const Cooperation = '/api/cooperation'
+export const Servis = '/api/service_consumer'
 const fetch = axios.create({
 
 })

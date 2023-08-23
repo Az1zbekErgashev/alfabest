@@ -1,0 +1,22 @@
+
+
+.purchase{
+    padding-top: 160px;
+    h2{
+        text-align: left;
+        font-weight: 800;
+    }
+    p{
+        text-align: left;
+        font-weight: 600;
+    }
+    .SwiperPurchase{
+        margin: 50px 0;
+        .SliderPurchase{
+            width: 350px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+}

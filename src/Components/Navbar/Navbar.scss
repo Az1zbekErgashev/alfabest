@@ -31,12 +31,22 @@
         .language {
             display: flex;
             align-items: center;
-            p {
+             p{
                 padding-bottom: 15px;
                 margin: 0 10px;
                 font-weight: 600;
                 cursor: pointer;
                 color: white;
+
+            }
+             button{
+                padding-bottom: 15px;
+                margin: 0 10px;
+                font-weight: 600;
+                cursor: pointer;
+                color: white;
+                border: none;
+                background: none;
 
             }
         }
@@ -108,6 +118,7 @@
     }
     .active{
         font-weight: 700;
+        color: black;
     }
     .activeNo{
         color: grey !important;
