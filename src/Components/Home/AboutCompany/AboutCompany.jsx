@@ -110,7 +110,7 @@ export default function AboutCompany() {
 
 
   return (
-    <div className='container-fluid  bg-white'>
+    <div className='container-fluid  bg-white overflow-hidden'>
       <div className='container'>
         {About_Row}
         <div className='container'>

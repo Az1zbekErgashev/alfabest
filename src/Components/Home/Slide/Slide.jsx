@@ -24,7 +24,7 @@ export const Slide = () => {
         run()
     }, [])
     return (
-        <div>
+        <div className='overflow-hidden'>
             <Swiper
                 slidesPerView={1}
                 navigation

@@ -159,6 +159,7 @@
         display: none !important;
     }
     .navbarMobile{
+        overflow: hidden;
         padding: 0 10px;
         display: flex !important;
         justify-content: space-between;

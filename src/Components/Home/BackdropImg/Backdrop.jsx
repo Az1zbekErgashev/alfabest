@@ -16,7 +16,7 @@ export default function Backdrop() {
         </div>
     )
   return (
-    <div className='container-fluid backdrop'>
+    <div className='container-fluid backdrop overflow-hidden'>
     <section></section>
     {Backdrop}
     </div>

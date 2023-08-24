@@ -80,6 +80,6 @@ export default function Aim() {
     )
 
   return (
-    <div className='container-fluid aim'><div className='container'> {AimComponent} </div> </div>
+    <div className='container-fluid aim overflow-hidden'><div className='container'> {AimComponent} </div> </div>
   )
 }

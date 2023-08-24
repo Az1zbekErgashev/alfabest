@@ -133,7 +133,7 @@ export default function NavbarMobile() {
     </div>
   )
   return (
-    <div>
+    <div className=' overflow-hidden'>
       <div>
         {ShowPages}
       </div>

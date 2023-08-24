@@ -66,7 +66,7 @@ export default function History() {
         </div>
     )
   return (
-    <div className='container-fluid bg-white history'>
+    <div className='container-fluid bg-white history overflow-hidden'>
         {HistoryComponents}
     </div>
   )
