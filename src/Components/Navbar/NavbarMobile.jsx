@@ -137,7 +137,7 @@ export default function NavbarMobile() {
       <div>
         {ShowPages}
       </div>
-      <div style={{display: showPhoto ? 'none' : 'd-flex d-sm-none'}} className='navbarMobile'>
+      <div style={{display: showPhoto ? 'd-block' : ''}} className='navbarMobile'>
         <div>
           <Link className='link' to='/'>
             <img src={Logo} alt="foto" />
