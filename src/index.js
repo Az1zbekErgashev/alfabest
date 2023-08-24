@@ -14,6 +14,7 @@ import { LanguageProvider } from "./Components/useContext/LanguageContext";
 import Career from "./Components/Career/Career";
 import Purchase from "./Components/Purchases/Purchase";
 import Coopertion from "./Components/Сooperation/Coopertion";
+import Contact from "./Components/Contact/Contact";
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(
         <React.StrictMode>
@@ -26,6 +27,7 @@ import Coopertion from "./Components/Сooperation/Coopertion";
             <Route  path='/carrier' element={<Career />} />
             <Route  path='/purchase' element={<Purchase />} />
             <Route  path='/cooperation' element={<Coopertion />}/>
+            <Route  path='/contact' element={<Contact />}/>
           </Route>
         </Routes>
       </LanguageProvider>

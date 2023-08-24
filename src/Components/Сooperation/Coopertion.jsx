@@ -98,14 +98,15 @@ export default function Coopertion() {
     function submitInput() {
         if (inputValueName.length !== 0 && regex.test(inputValueName) && inputClassNum.length > 7 && regex2.test(inputValueNumber)) {
             let data = {
-                service_id: 0,
-                full_name: inputClassName,
-                phone: inputClassNum
+                service_id: 1,
+                full_name: inputValueName,
+                phone: inputValueNumber
             }
+            // let arr =  JSON.stringify(data)
+
             Data.postServis(data)
             .then(res => {
                 run()
-                console.log(res);
             })
             setOpen(true)
         }
@@ -217,7 +218,7 @@ export default function Coopertion() {
                             </div>
                             <div className="col-12 text-start inputPost">
                                 <input className={inputClassNum} pattern="[0-9+]+" placeholder={`${showErrorNum ? 'Поле объязательно для ввода !' : '+998'}  `} type="text" value={inputValueNumber} onChange={handleInputNumber} />
-                                {patternNumber.test(inputValueNumber) && <p>{language === 'uz' ? <>Faqat sonlar kiriting ! </> : <> Введите только цифры</>}</p>} {showErrorNum ? <p>{language === 'uz' ? 'выв' : ''}</p> : <p>{language === 'uz' ? '' : ''}</p>}
+                                {patternNumber.test(inputValueNumber) && <p>{language === 'uz' ? <>Faqat sonlar kiriting ! </> : <> Введите только цифры</>}</p>} {showErrorNum ? <p>{language === 'uz' ? '' : ''}</p> : <p>{language === 'uz' ? '' : ''}</p>}
 
                             </div>
                             <div className="col-12  text-start inputPostBtn inputPost">

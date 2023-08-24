@@ -135,7 +135,7 @@
 
 @media (max-width: 425px) {
     .textCopertion{
-        font-size: 18px;
+        font-size: 14px;
         gap: 15px;
        
     }
@@ -237,6 +237,7 @@
             padding: 0 10px;
             border-radius: 10px;
             animation: invalid 0.3s 2;
+            font-size: 13px;
         }
      
         .DisableInput{

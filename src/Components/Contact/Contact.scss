@@ -1,0 +1,124 @@
+.Contact {
+    padding-top: 150px;
+    position: relative;
+    margin-bottom: 50px;
+    .ContactImg {
+
+        position: absolute;
+        bottom: 50px;
+        right: 0px;
+        img{
+            float: right;
+            object-fit: contain;
+            width: 450px;
+            border-radius: 20px;
+        }
+    }
+    .ContactInput{
+        .ContactInput_text{
+            margin-bottom: 60px;
+            text-align: left;
+            h2{
+                font-weight: 800;
+                margin: 10px 0;
+            }
+        }
+        .inputPost{
+            margin-top: -10px;
+            width: 90%;
+            height: 110px;
+            padding: 0 20px;
+            button{
+                float: left;                
+            }
+            label{
+                text-align: left;
+                color: grey;
+                width: 100%;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+            input{
+                width: 350px;
+            }
+        }
+        .AdresContact{
+            margin-top: -20px;
+            padding: 0 20px;
+            width: 100%;
+            text-align: left;
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width:425px) {
+    .Contact {
+        padding-top: 120px;
+        position: relative;
+        margin-bottom: 50px;
+        height: 
+        1150px;
+        .ContactImg {
+    
+            position: absolute;
+            bottom: 0px;
+           left: 0px !important;
+           right: 0px;
+            img{
+                float: none;
+                object-fit: contain;
+                width: 300px;
+                border-radius: 20px;
+            }
+        }
+        .ContactInput{
+            .ContactInput_text{
+                margin-bottom: 60px;
+                text-align: left;
+                h2{
+                    font-weight: 800;
+                    margin: 10px 0;
+                }
+            }
+            .inputPost{
+                margin-top: -10px;
+                width: 90%;
+                height: 110px;
+                padding: 0 20px;
+                p{
+                    bottom: -5px;
+                    font-size: 13px;
+                    left: 0px;
+                }
+                button{
+                    float: none;                
+                }
+                label{
+                    text-align: left;
+                    color: grey;
+                    width: 100%;
+                    font-weight: 700;
+                    margin: 10px 0;
+                }
+                input{
+                    width: 270px;
+                }
+            }
+            .AdresContact{
+                margin-top: -20px;
+                padding: 0 20px;
+                width: 100%;
+                text-align: left;
+                p{
+                    font-size: 14px !important ;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

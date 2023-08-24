@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
-import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey, Career_uz, Purchase, Team, Cooperation, Servis } from "./FetchData/Fetch";
-
+import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey, Career_uz, Purchase, Team, Cooperation, Servis, Contact, ContactPhone } from "./FetchData/Fetch";
+import axios from "axios";
 
 
 class data {
@@ -164,14 +164,42 @@ class data {
             })
         return cur
     }
-    async postServis() {
-        const cur = fetch.get(`${BaseUrl_Uz}${Servis}`, {
+    async postServis(data) {
+        const cur = fetch.post(`${BaseUrl_Uz}${Servis}`, data , {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang'),
+                'Content-Type': 'application/json'
+            },  
+                 
+        })
+            .then(res => {
+                return res.data.datas
+            })
+            .catch(e => {
+
+            })
+        return cur
+    }
+    async getContact() {
+        const cur = fetch.get(`${BaseUrl_Uz}${Contact}`, {
             headers: {
                 "Accept-Language": localStorage.getItem('lang')
             }
         })
             .then(res => {
-                // console.log(res.data.datas);
+                return res.data.datas
+            })
+            .catch(e => {
+            })
+        return cur
+    }
+    async getContactPhone() {
+        const cur = fetch.get(`${BaseUrl_Uz}${ContactPhone}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang')
+            }
+        })
+            .then(res => {
                 return res.data.datas
             })
             .catch(e => {
