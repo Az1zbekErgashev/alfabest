@@ -15,6 +15,7 @@ export default function NavbarMobile() {
   const [showPhoto, setShowPhoto] = useState(false);
   const [pages, setPages] = useState('')
   const location = useNavigate()
+  const history = useLocation()
   function languagee(i) {
     changeLanguage(i)
     if (i === 'ru') {
@@ -34,8 +35,8 @@ export default function NavbarMobile() {
 
   }
   function setUrlPage(i) {
-    // localStorage.setItem('page' , (i))
     setPages(i)
+    window.location.href = i
   }
 
 
@@ -110,29 +111,29 @@ export default function NavbarMobile() {
           <ul>
             <li className='dropdown_iteam_active' onClick={() => dropdown()}> <p>{language === 'uz' ? <>Xizmatlar</> : <>Услуги</>}</p> <h3>{drop ? '-' : '+'}</h3></li>
             {drop && <ul>
-              <NavLink className={({ isActive, isPending }) =>
+              <NavLink  data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/household')} className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "link" : "link"
                                 } to='/household'><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</li></NavLink>
-              <NavLink className={({ isActive, isPending }) =>
+              <NavLink onClick={() => setUrlPage('/catering')}  data-bs-dismiss="offcanvas" aria-label="Close" className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "link" : "link"
                                 } to='/catering' ><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</li></NavLink>
-              <NavLink className={({ isActive, isPending }) =>
+              <NavLink  onClick={() => setUrlPage('/transportation')} data-bs-dismiss="offcanvas" aria-label="Close" className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "link" : "link"
                                 } to='/transportation'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Transport va yo'lovchi tashish</> : <>Транспортные и пассажирские перевозки</>}</li>
               </NavLink>
 
-              <NavLink className={({ isActive, isPending }) =>
+              <NavLink  onClick={() => setUrlPage('/engineering')} data-bs-dismiss="offcanvas" aria-label="Close" className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "link" : "link"
                                 } to='/engineering'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</li>
               </NavLink>
             </ul>}
-            <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/about')} className='link text-dark'><li className=' text-dark text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kompaniya haqida</> : <> О компании</>}</li></Link>
-            <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/carrier')} className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Karyera</> : <>Карьера</>}</li></Link>
-            <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/purchase')} className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Xarid qilish</> : <>Закупки</>}</li></Link>
-            <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/cooperation')} className='link text-dark'><li className=' text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Hamkorlik</> : <>Сотрудничество</>}</li></Link>
-            <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/contact')} className='link text-dark'><li className=' text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kontaktlar</> : <>Контакты</>}</li></Link>
+            <Link   data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/about')} className='link text-dark'><li className=' text-dark text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kompaniya haqida</> : <> О компании</>}</li></Link>
+            <Link   data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/carrier')} className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Karyera</> : <>Карьера</>}</li></Link>
+            <Link   data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/purchase')} className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Xarid qilish</> : <>Закупки</>}</li></Link>
+            <Link   data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/cooperation')} className='link text-dark'><li className=' text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Hamkorlik</> : <>Сотрудничество</>}</li></Link>
+            <Link   data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/contact')} className='link text-dark'><li className=' text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kontaktlar</> : <>Контакты</>}</li></Link>
           </ul>
         </div>
       </div>
