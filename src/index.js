@@ -15,6 +15,10 @@ import Career from "./Components/Career/Career";
 import Purchase from "./Components/Purchases/Purchase";
 import Coopertion from "./Components/Сooperation/Coopertion";
 import Contact from "./Components/Contact/Contact";
+import Catering from "./Components/Catering/Catering";
+import Transportation from "./Components/Transportation/Transportation";
+import Foods from "./Components/Foods/Foods";
+import Household from "./Components/Household/Household";
       const root = ReactDOM.createRoot(document.getElementById("root"));
       root.render(
         <React.StrictMode>
@@ -28,6 +32,10 @@ import Contact from "./Components/Contact/Contact";
             <Route  path='/purchase' element={<Purchase />} />
             <Route  path='/cooperation' element={<Coopertion />}/>
             <Route  path='/contact' element={<Contact />}/>
+            <Route  path='/engineering' element={<Catering />}/>
+            <Route  path='/transportation' element={<Transportation />}/>
+            <Route  path='/catering' element={<Foods />}/>
+            <Route  path='/household' element={<Household />}/>
           </Route>
         </Routes>
       </LanguageProvider>

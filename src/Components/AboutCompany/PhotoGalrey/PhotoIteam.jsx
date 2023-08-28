@@ -49,7 +49,7 @@ export default function PhotoIteam() {
         
     </Swiper>
     )
-    const PhotoGalerey = (
+    const PhotoGalereyy = (
         <div className='container PhotoGalerey'>
         <div className='PhotoGalereyLogo'>
             <img src={Logo} alt="logo" />
@@ -88,7 +88,7 @@ export default function PhotoIteam() {
 
     return (
         <div>
-            {PhotoGalerey}
+            {PhotoGalereyy}
         </div>
     )
 }

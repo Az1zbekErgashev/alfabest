@@ -4,7 +4,7 @@ import Logo from './img/LogoDark.svg'
 import './Navbar.scss'
 import LanguageContext from '../useContext/LanguageContext'
 import LogoMob from './img/LogoMob.svg'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router-dom'
 export default function NavbarMobile() {
   const [activeIteam, setActiveIteam] = useState('')
@@ -34,18 +34,18 @@ export default function NavbarMobile() {
 
   }
   function setUrlPage(i) {
+    localStorage.setItem('page' , (i))
     setPages(i)
   }
 
 
   useEffect(() => {
-
+    let cur = localStorage.getItem('page')
     const timer = setTimeout(() => {
-
-      location(pages);
+      location(cur);
     }, 2000);
 
-    return () => clearTimeout(timer); // Очистка таймера при размонтировании компонента
+    return () => clearTimeout(timer);
   }, [pages]);
   useEffect(() => {
     setTimeout(() => {
@@ -108,10 +108,15 @@ export default function NavbarMobile() {
           <ul>
             <li className='dropdown_iteam_active' onClick={() => dropdown()}> <p>{language === 'uz' ? <>Xizmatlar</> : <>Услуги</>}</p> <h3>{drop ? '-' : '+'}</h3></li>
             {drop && <ul>
-              <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</li>
-              <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</li>
+              <NavLink to='/household'><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</li></NavLink>
+              <NavLink to='/catering' ><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</li></NavLink>
+              <NavLink to='/transportation'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Transport va yo'lovchi tashish</> : <>Транспортные и пассажирские перевозки</>}</li>
+              </NavLink>
+
+              <NavLink to='/engineering'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</li>
+              </NavLink>
             </ul>}
             <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/about')} className='link text-dark'><li className=' text-dark text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Kompaniya haqida</> : <> О компании</>}</li></Link>
             <Link data-bs-dismiss="offcanvas" aria-label="Close" onClick={() => setUrlPage('/carrier')} className='link text-dark'><li className='text-start my-2 fs-5 fw-bold'>{language === 'uz' ? <>Karyera</> : <>Карьера</>}</li></Link>

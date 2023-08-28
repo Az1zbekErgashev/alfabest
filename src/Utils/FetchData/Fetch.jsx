@@ -15,6 +15,7 @@ export const Cooperation = '/api/cooperation'
 export const Servis = '/api/service_consumer'
 export const Contact = '/api/contact_page'
 export const ContactPhone = '/api/contact_info'
+export const ServisCategoriy = '/api/services_category'
 const fetch = axios.create({
 
 })

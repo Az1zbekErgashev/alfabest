@@ -5,6 +5,7 @@ import Data from '../../Utils/Data';
 import { BaseUrl_Uz } from '../../Utils/FetchData/Fetch';
 import Logo from '../AboutCompany/AimAbout/img/LogoDark.svg'
 import AlertDialog from '../Alert';
+import AOS from 'aos';
 
 
 export default function Coopertion() {
@@ -135,6 +136,9 @@ export default function Coopertion() {
             }
         }
     })
+    useEffect(()=>{
+        AOS.init()
+    })
 
 
     useEffect(() => {
@@ -147,10 +151,10 @@ export default function Coopertion() {
 
     const Categoriy = (
         <div className='row container g-0'>
-            <div className=" d-flex justify-content-beetwen align-items-center  textCopertion fw-bolder   col-12 col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3  '></i> <p>{language === 'uz' ? <>Jarayonni optimallashtirish orqali xarajatlarni kamaytirish</> : <>Сокращение издержек за счет оптимизации процессов</>}</p> </div>
-            <div className=" d-flex justify-content-beetwen align-items-center textCopertion fw-bolder  col-12 col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i> <p>{language === 'uz' ? <>Malakali tajribali pudratchini jalb qilish orqali xizmatlar sifatini oshirish</> : <>Улучшение качества услуг за счет привлечения квалифицированного опытного подрядчика</>} </p></div>
-            <div className=" d-flex justify-content-beetwen align-items-center col-12 textCopertion fw-bolder  col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i>   <p>{language === 'uz' ? <>Sizning ehtiyojlaringizga moslashtirilgan menyu va xizmatlar</> : <>Адаптированные под ваши потребности меню и услуги</>}</p> </div>
-            <div className=" d-flex justify-content-beetwen   align-items-center col-12 textCopertion fw-bolder  col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i>   <p>{language === 'uz' ? <>
+            <div data-aos="zoom-in" className=" d-flex justify-content-beetwen align-items-center  textCopertion fw-bolder   col-12 col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3  '></i> <p>{language === 'uz' ? <>Jarayonni optimallashtirish orqali xarajatlarni kamaytirish</> : <>Сокращение издержек за счет оптимизации процессов</>}</p> </div>
+            <div data-aos="zoom-in" className=" d-flex justify-content-beetwen align-items-center textCopertion fw-bolder  col-12 col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i> <p>{language === 'uz' ? <>Malakali tajribali pudratchini jalb qilish orqali xizmatlar sifatini oshirish</> : <>Улучшение качества услуг за счет привлечения квалифицированного опытного подрядчика</>} </p></div>
+            <div data-aos="zoom-in" className=" d-flex justify-content-beetwen align-items-center col-12 textCopertion fw-bolder  col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i>   <p>{language === 'uz' ? <>Sizning ehtiyojlaringizga moslashtirilgan menyu va xizmatlar</> : <>Адаптированные под ваши потребности меню и услуги</>}</p> </div>
+            <div data-aos="zoom-in" className=" d-flex justify-content-beetwen   align-items-center col-12 textCopertion fw-bolder  col-sm-6 text-start my-5"><i className='bi bi-shield-fill-exclamation text-success fs-3'></i>   <p>{language === 'uz' ? <>
                 Boshqaruv jamoasining sa'y-harakatlarini asosiy faoliyatga jamlash</> : <>Концентрация усилий управленческой команды на основной деятельности</>}</p> </div>
         </div>
 
@@ -198,7 +202,7 @@ export default function Coopertion() {
 
                 <div>
                     <div className='container CoopertionInput row'>
-                        <div className="col-12 col-sm-6 row">
+                        <div className="col-12 col-sm-6 row"  >
                             <div className="col-12 text-start select" onClick={() => SelectActive()}>
                                 <div > <p>{selected === undefined && <> {language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</>} {language === 'uz' ? <>{selected} </> : <>{selected}</>}</p>
                                     {select ? <i className="bi bi-arrow-up-circle-fill"></i> : <i className="bi bi-arrow-down-circle-fill"></i>}  </div>
@@ -229,7 +233,7 @@ export default function Coopertion() {
 
 
 
-                        <div className="col-12 col-sm-6 text-end ContactImg ">
+                        <div className="col-12 col-sm-6 text-end ContactImg " data-aos="zoom-out-up">
                             <img src="https://i.ibb.co/JH7Gkvw/Group-9.png" alt="" />
                         </div>
                     </div>

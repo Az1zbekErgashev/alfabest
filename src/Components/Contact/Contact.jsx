@@ -4,6 +4,7 @@ import { BaseUrl_Uz } from '../../Utils/FetchData/Fetch';
 import Data from '../../Utils/Data';
 import LanguageContext from '../useContext/LanguageContext'
 import AlertDialog from '../Alert';
+import AOS from 'aos';
 export default function Contact() {
   const { language, changeLanguage } = useContext(LanguageContext);
   const [contact, setConatct] = useState([])
@@ -97,6 +98,9 @@ export default function Contact() {
     CobtactPhone()
     run()
   }, [])
+  useEffect(()=>{
+    AOS.init()
+  })
   return (
     <div className='container'>
       <div className="row  Contact">
@@ -143,7 +147,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 ContactImg">
+              <div className="col-12 col-sm-6 ContactImg" data-aos="zoom-out-up">
                 <img src={`${BaseUrl_Uz}/storage/${iteam.image}`} alt="foto" />
               </div>
             </>

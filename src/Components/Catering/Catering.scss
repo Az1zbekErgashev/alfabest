@@ -1,0 +1,57 @@
+.cateringLogo{
+    margin-left: 150px;
+    img{
+        object-fit: contain;
+    }
+}
+.cateringText{
+   p{
+    font-weight: normal;
+    margin-top: 40px;
+   }
+}
+.cateringInfo{
+    margin: 20px 0;
+    div{
+        margin: 5px 0 !important; 
+    }
+    p{
+        width: 600px;
+    }
+}
+.cateringCategoriy{
+    div{
+        position: relative;
+    }
+    p{
+        width: 550px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cateringLogo{
+        margin-left: 0px;
+        p{
+            width: 200px !important;
+            font-size: 14px;
+        }
+    }
+    .cateringInfo{
+        div{
+            margin: 10px 0 !important;
+        }
+        p{
+            width: 300px;
+        }
+    }
+    .cateringCategoriy{
+
+        div{
+            position: relative;
+            margin: 10px 0 !important;
+        }
+        p{
+            width: 600px;
+        }
+    }
+}

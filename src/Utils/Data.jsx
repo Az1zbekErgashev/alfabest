@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey, Career_uz, Purchase, Team, Cooperation, Servis, Contact, ContactPhone } from "./FetchData/Fetch";
+import fetch, { BaseUrl_Uz, Navbar_Uz, Slider_Uz, About_Company_Uz, Aim_Uz, AimCategoriy_Uz, History_Uz, AimAbout, PhotoGalerey, Career_uz, Purchase, Team, Cooperation, Servis, Contact, ContactPhone, ServisCategoriy } from "./FetchData/Fetch";
 import axios from "axios";
 
 
@@ -196,13 +196,29 @@ class data {
     async getContactPhone() {
         const cur = fetch.get(`${BaseUrl_Uz}${ContactPhone}`, {
             headers: {
-                "Accept-Language": localStorage.getItem('lang')
+                "Accept-Language": localStorage.getItem('lang'),
             }
         })
             .then(res => {
                 return res.data.datas
             })
             .catch(e => {
+            })
+        return cur
+    }
+    async getServisCategoriy() {
+        const cur = fetch.get(`${BaseUrl_Uz}${ServisCategoriy}`, {
+            headers: {
+                "Accept-Language": localStorage.getItem('lang'),
+                'Content-Type': 'application/json'
+
+            }
+        })
+            .then(res => {
+                return res.data.datas
+            })
+            .catch(e => {
+                console.log(e);
             })
         return cur
     }
