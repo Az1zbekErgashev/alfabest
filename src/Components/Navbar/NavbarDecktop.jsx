@@ -222,9 +222,7 @@ export default function NavbarDecktop() {
                     <div className="navbar__row__1_col ">
                         {visible ? (
                             <NavLink
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "active fw-bold" : "link"
-                                }
+                               
                                 
                                 to="/"
                             >

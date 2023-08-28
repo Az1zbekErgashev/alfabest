@@ -111,7 +111,7 @@ export default function Catering() {
             </div>
     )
     return (
-        <div className=''>
+        <div className='overflow-hidden'>
             {CateringHeader}
                 {CateringInfo}
             <div className='backdrop container-fluid'>

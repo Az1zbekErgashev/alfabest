@@ -111,7 +111,7 @@ export default function Household() {
 
 
     return (
-        <div>
+        <div className='overflow-hidden'>
             {HouseHead}
             {HouseBody}
             <div className='backdrop container-fluid'>

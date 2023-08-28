@@ -16,7 +16,7 @@ export default function Navbar() {
         return () =>{
         window.removeEventListener('scroll', NavbarScroll);
         }
-    },[])
+    })
 
     return (
         <div className='Navbar sdsds'  style={{background: visible ? 'none' : 'white', boxShadow: visible ? 'none' : '0px 0px 10px black'}}>

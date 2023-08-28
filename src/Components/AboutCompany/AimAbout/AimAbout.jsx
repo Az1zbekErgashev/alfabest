@@ -43,8 +43,8 @@ export default function AimAbout() {
             {aim && aim?.map((iteam,) => {
               return (
                 <>
-                  {language === 'uz' && <p  dangerouslySetInnerHTML={{ __html: iteam.text_uz }}></p>}
-                  {language === 'ru' && <p  dangerouslySetInnerHTML={{ __html: iteam.text_ru }}></p>}
+                  {language === 'uz' && <p dangerouslySetInnerHTML={{ __html: iteam.text_uz }}></p>}
+                  {language === 'ru' && <p dangerouslySetInnerHTML={{ __html: iteam.text_ru }}></p>}
                 </>
               )
             })}
@@ -62,29 +62,37 @@ export default function AimAbout() {
   const AboitAimCategoriy = (
     <div className='container'>
       <div className="row AboutAimCategoriy" >
-        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000" >
+        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out" data-aos-duration="4000" >
           <h2>{language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/f71IshXZ61Lnm6d3EzY7.png" alt="logo" />
-          <NavLink  to='/engineering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
+          <NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active fw-bold link" : "text-dark link"
+          } to='/engineering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
         </div>
-        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
+        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out" data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/r4RPpooRZClcio58JV1e.png" alt="" />
-          <NavLink  to='/household'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
+          <NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active fw-bold link" : "text-dark link"
+          } to='/household'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
 
-          
+
         </div>
-        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
+        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out" data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/BVWU6Q07YnlwqAOFy2R8.png" alt="" />
-          <NavLink  to='/catering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
+          <NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active fw-bold link" : "text-dark link"
+          } to='/catering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
 
-          
+
         </div>
-        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
+        <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out" data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Transport va yo'lovchi tashish</> : <>Транспортные и пассажирские перевозки</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/May2023/tkopmFk4l6qK2CuCBDLm.png" alt="" />
-          <NavLink  to='/transportation'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
+          <NavLink className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active fw-bold link" : "text-dark link"
+          } to='/transportation'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
         </div>
       </div>
     </div>

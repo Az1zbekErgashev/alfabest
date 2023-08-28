@@ -95,7 +95,7 @@ export default function Transportation() {
         </div>
     )
     return (
-        <div className=''>
+        <div className='overflow-hidden'>
             {transportHeader}
             {TransportBody}
             <div className='backdrop container-fluid'>

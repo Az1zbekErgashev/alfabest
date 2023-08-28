@@ -34,19 +34,21 @@ export default function NavbarMobile() {
 
   }
   function setUrlPage(i) {
-    localStorage.setItem('page' , (i))
+    // localStorage.setItem('page' , (i))
     setPages(i)
   }
 
 
   useEffect(() => {
-    let cur = localStorage.getItem('page')
+    let cur = [...pages]
     const timer = setTimeout(() => {
       location(cur);
     }, 2000);
 
     return () => clearTimeout(timer);
   }, [pages]);
+
+
   useEffect(() => {
     setTimeout(() => {
       setShowPhoto(true);
@@ -108,13 +110,21 @@ export default function NavbarMobile() {
           <ul>
             <li className='dropdown_iteam_active' onClick={() => dropdown()}> <p>{language === 'uz' ? <>Xizmatlar</> : <>Услуги</>}</p> <h3>{drop ? '-' : '+'}</h3></li>
             {drop && <ul>
-              <NavLink to='/household'><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</li></NavLink>
-              <NavLink to='/catering' ><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</li></NavLink>
-              <NavLink to='/transportation'>
+              <NavLink className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "link" : "link"
+                                } to='/household'><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</li></NavLink>
+              <NavLink className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "link" : "link"
+                                } to='/catering' ><li className='text-start text-secondary my-2'>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</li></NavLink>
+              <NavLink className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "link" : "link"
+                                } to='/transportation'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Transport va yo'lovchi tashish</> : <>Транспортные и пассажирские перевозки</>}</li>
               </NavLink>
 
-              <NavLink to='/engineering'>
+              <NavLink className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "link" : "link"
+                                } to='/engineering'>
               <li className='text-start text-secondary my-2'>{language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</li>
               </NavLink>
             </ul>}
