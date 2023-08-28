@@ -236,7 +236,9 @@ export default function NavbarDecktop() {
                                 <img src={LogoDark} alt="Logo" />{" "}
                             </NavLink>
                         )}
-                        <h4 style={{ color: visible ? "white" : "black" }}>Alfa Best</h4>
+                        <NavLink to='/'   className={({ isActive, isPending }) =>
+                                    isPending ? "pending" : isActive ? "active fw-bold" : "link"
+                                }><h4 style={{ color: visible ? "white" : "black" }}>Alfa Best</h4></NavLink>
                     </div>
                     <div className="navbar__row__1_col">
                         <ul>

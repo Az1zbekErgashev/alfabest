@@ -8,12 +8,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import LanguageContext from '../../useContext/LanguageContext';
-import {Autoplay} from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
+import { NavLink } from 'react-router-dom';
 
 export const Slide = () => {
     const [SliderData, setSliderData] = useState([])
-  const { language, changeLanguage } = useContext(LanguageContext);
-
+    const { language, changeLanguage } = useContext(LanguageContext);
     function run() {
         Data.getSlider_Uz()
             .then(res => {
@@ -38,13 +38,15 @@ export const Slide = () => {
                     ? SliderData?.map((slide, index) => {
                         return (
                             <SwiperSlide>
-                                <div  className='slide_img'>
-                                <img src={ `${BaseUrl_Uz}/storage/${slide.img}`} alt="logo" />
+                                <div className='slide_img'>
+                                    <img src={`${BaseUrl_Uz}/storage/${slide.img}`} alt="logo" />
                                     <div className='Button_group'>
                                         <img src={Logo} alt="logo" />
                                         {language === 'uz' && <h4>{slide.text_uz}</h4>}
                                         {language === 'ru' && <h4>{slide.text_ru}</h4>}
-                                        <button>{language === 'uz' ? 'Batafsil' : 'Узнать больше'}</button>
+                                        <NavLink className={({ isActive, isPending }) =>
+                                            isPending ? "pending" : isActive ? "active" : " text-white link"
+                                        } to={`${slide.home_service_link}`}><button>{language === 'uz' ? 'Batafsil' : 'Узнать больше'}</button></NavLink>
                                     </div>
                                 </div>
                             </SwiperSlide>

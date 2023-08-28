@@ -5,7 +5,7 @@ import AOS from 'aos';
 import './AimAbout.scss'
 import Logo from './img/LogoDark.svg'
 import LanguageContext from '../../useContext/LanguageContext';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 export default function AimAbout() {
   const { language, changeLanguage } = useContext(LanguageContext);
   const [aim, setAim] = useState([])
@@ -65,26 +65,26 @@ export default function AimAbout() {
         <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000" >
           <h2>{language === 'uz' ? <>Muhandislik va texnik ekspluatatsiya</> : <>Инженерно-техническая эксплуатация</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/f71IshXZ61Lnm6d3EzY7.png" alt="logo" />
-          <Link className='link'>{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></Link>
+          <NavLink  to='/engineering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
         </div>
         <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Xizmat ko'rsatish va maishiy xizmat ko'rsatish</> : <>Сервисное и бытовое обслуживание</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/r4RPpooRZClcio58JV1e.png" alt="" />
-          <Link className='link'>{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></Link>
+          <NavLink  to='/household'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
 
           
         </div>
         <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Korporativ ovqatlanish</> : <>Корпоративное питание</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/December2022/BVWU6Q07YnlwqAOFy2R8.png" alt="" />
-          <Link className='link'>{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></Link>
+          <NavLink  to='/catering'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
 
           
         </div>
         <div className="col-12 col-sm-6 AboutAimCategoriy__Card" data-aos="zoom-out"  data-aos-duration="4000">
           <h2>{language === 'uz' ? <>Transport va yo'lovchi tashish</> : <>Транспортные и пассажирские перевозки</>}</h2>
           <img src="http://alfabest.napaautomotive.uz/storage/home-services/May2023/tkopmFk4l6qK2CuCBDLm.png" alt="" />
-          <Link className='link'>{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></Link>
+          <NavLink  to='/transportation'   >{language === 'uz' ? <>Batafsil</> : <>Подробнее</>} <i className='bi bi-arrow-right'></i></NavLink>
         </div>
       </div>
     </div>

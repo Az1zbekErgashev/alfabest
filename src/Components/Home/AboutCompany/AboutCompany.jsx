@@ -4,6 +4,7 @@ import Data from '../../../Utils/Data'
 import { BaseUrl_Uz } from '../../../Utils/FetchData/Fetch'
 import Logo from './img/LogoDark.svg'
 import AOS from 'aos';
+import { NavLink } from 'react-router-dom'
 import 'aos/dist/aos.css';
 import { useContext } from 'react'
 import LanguageContext from '../../useContext/LanguageContext'
@@ -36,7 +37,6 @@ export default function AboutCompany() {
       text: 'Hodimlar'
     },
   ])
-
 
 
   function run() {
@@ -83,7 +83,10 @@ export default function AboutCompany() {
                 }
               >
               </div>}
+              <NavLink to='/about'>
               <button>{language === 'uz' ? 'Batafsil' : 'Узнать больше'}</button>
+              </NavLink>
+              
             </div>
           )
         })}
