@@ -1,5 +1,5 @@
 import axios from "axios"
-export const BaseUrl_Uz = 'https://alfabest.napaautomotive.uz'
+export const BaseUrl_Uz = 'https://back.alfabestservis.uz'
 export const Navbar_Uz = '/api/home_content'
 export const Slider_Uz = '/api/home_content'
 export const About_Company_Uz = '/api/about_company'
